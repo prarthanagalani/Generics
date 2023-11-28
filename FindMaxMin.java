@@ -2,15 +2,16 @@ package Generics;
 
 public class FindMaxMin {
 
-    public static Integer findMax(Integer num1, Integer num2, Integer num3) {
-        Integer max = num1;
+     // Generic method to find the max of three values
+     public static <T extends Comparable<T>> T findMax(T val1, T val2, T val3) {
+        T max = val1;
 
-        if (num2.compareTo(max) > 0) {
-            max = num2;
+        if (val2.compareTo(max) > 0) {
+            max = val2;
         }
 
-        if (num3.compareTo(max) > 0) {
-            max = num3;
+        if (val3.compareTo(max) > 0) {
+            max = val3;
         }
 
         return max;
