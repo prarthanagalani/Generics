@@ -32,6 +32,21 @@ public class FindMaxMin {
         return max;
     }
 
+     // Use Case 3: Find max of 3 strings
+     public static String findMax(String str1, String str2, String str3) {
+        String max = str1;
+
+        if (str2.compareTo(max) > 0) {
+            max = str2;
+        }
+
+        if (str3.compareTo(max) > 0) {
+            max = str3;
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
         // Test Case 1: Given Max Number at 1st Position, return the Same Number
         Integer num1 = 10, num2 = 5, num3 = 8;
@@ -60,6 +75,18 @@ public class FindMaxMin {
         // Test Case 3: Given Max Number at 3rd Position, return the Same Number (Float)
         floatNum1 = 5.4f; floatNum2 = 8.8f; floatNum3 = 20.3f;
         System.out.println("Test Case 3 (Float): " + findMax(floatNum1, floatNum2, floatNum3));
+
+        // Test Case 1: Given Max String at 1st Position, return the Same String
+        String str1 = "orange", str2 = "banana", str3 = "apple";
+        System.out.println("Test Case 1 (String): " + findMax(str1, str2, str3));
+
+        // Test Case 2: Given Max String at 2nd Position, return the Same String
+        str1 = "apple"; str2 = "orange"; str3 = "banana";
+        System.out.println("Test Case 2 (String): " + findMax(str1, str2, str3));
+
+        // Test Case 3: Given Max String at 3rd Position, return the Same String
+        str1 = "banana"; str2 = "apple"; str3 = "orange";
+        System.out.println("Test Case 3 (String): " + findMax(str1, str2, str3));
     }
 
 }
